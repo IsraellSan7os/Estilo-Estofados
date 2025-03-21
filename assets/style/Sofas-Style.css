@@ -27,7 +27,7 @@ header {
 body {
     padding-top: 60px; /* Ajuste o valor conforme a altura do seu cabeçalho */
     font-family: poppins, sans-serif;
-    background: #ff6600;
+    background:#ff6600;
  
 }
 
@@ -163,175 +163,89 @@ body {
     margin-bottom: 10px;
 }
 
-.texto-h4 {
-    color: #666;
+.main p {
     font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.texto {
-    font-size: 16px;
     line-height: 1.6;
     color: #333;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
+    font-weight: bolder;
 }
 
-.texto-main h3 {
-    color: #ff6600;
-    font-size: 24px;
-    margin-top: 20px;
+.vidio{
+    margin-bottom: 1rem;
+    width: 80%;
 }
 
-.texto-main h4 {
-    color: #ff6600;
-    font-size: 20px;
-    margin-top: 20px;
+.produto img {
+    width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
+    height: 200px; /* Define uma altura fixa para todas as imagens */
+    object-fit: cover; /* Mantém a proporção e corta o excesso para preencher o espaço */
+    border-radius: 10px; /* Deixa as bordas arredondadas para um design mais bonito */
 }
 
-.video-container {
+
+.produtos {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    margin: 20px 0;
-}
-
-.video-container iframe {
-    border-radius: 8px;
-}
-
-.texto-main p {
-    font-size: 16px;
-    color: #333;
-    line-height: 1.6;
-    margin: 10px 0;
-}
-
-.section {
-    max-width: 100%;
-    margin: 40px auto;
+    gap: 20px; /* Espaço entre os produtos */
     padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.produto {
+    width: 400px; /* Defina a largura do card do produto */
     text-align: center;
-}
-
-.section h4 {
-    color: #ff6600;
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-.section h3 {
-    color: #333;
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.title {
-    font-size: 26px;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.title span {
-    color: #ff6600;
-}
-
-.map {
-    width: 100%;
-    max-width: 600px;
-    height: 450px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-.section p {
-    font-size: 16px;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-.section a {
-    color: #ff6600;
-    text-decoration: none;
-}
-
-.section a:hover {
-    text-decoration: underline;
-}
-
-.formulario {
-    max-width: 600px;  /* Limita a largura do formulário */
-    margin: 40px auto; /* Adiciona margem superior e inferior e centraliza */
-    padding: 20px; /* Espaçamento interno */
-    background-color: #ff6600; /* Cor de fundo branca */
-    border: 1px solid #ddd; /* Borda sutil para destacar o formulário */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-}
-
-.input-grup {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;  /* Espaçamento entre os campos */
-}
-
-.input-grup label {
-    font-size: 16px;
-    color: #333;
-}
-
-.input-grup input,
-.input-grup textarea {
-    padding: 10px;
-    font-size: 16px;
     border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.produto img {
+    width: 100%; /* Garante que a imagem se ajuste ao card */
+    height: auto; /* Mantém a proporção */
+    border-radius: 5px;
+}
+
+.comprar {
+    background-color: #ff6600; /* Cor laranja */
+    color: white;
+    padding: 15px 15px;
+    font-size: 13px;
+    border: none;
     border-radius: 8px;
-    outline: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-transform: uppercase;
 }
 
-.input-grup input:focus,
-.input-grup textarea:focus {
-    border-color: #ff6600; /* Cor de destaque quando em foco */
+.comprar:hover {
+    background-color: #a04000; /* Tom mais escuro no hover */
 }
 
-.input-grup textarea {
-    resize: vertical;
-    height: 150px; /* Altura fixa para a área de texto */
+/* Estilizando o link do WhatsApp */
+.whatsapp {
+    display: inline-flex;
+    align-items: center;
+    background-color: #25d366;
+    color: white;
+    padding: 10px 20px;
+    font-size: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    margin-left: 10px; /* Espaçamento entre os botões */
 }
 
-/* Ajuste para tornar os campos mais compactos */
-.formulario {
-    width: 100%;
-    box-sizing: border-box;
+.whatsapp i {
+    margin-right: 2px;
 }
 
-.footer {
-    background-color: #333; /* Cor de fundo escura para o rodapé */
-    color: #fff; /* Texto branco */
-    padding: 20px 0; /* Espaçamento acima e abaixo */
-    text-align: center; /* Centraliza o texto */
-    font-size: 14px; /* Tamanho de fonte mais discreto */
-    margin-top: 0; /* Remove o espaço superior */
-    position: relative; /* Ajusta a posição */
-    bottom: 0; /* Faz o rodapé ficar no final da página */
-    width: 100%; /* Garante que o rodapé ocupe toda a largura da página */
+.whatsapp:hover {
+    background-color: #1eb255;
 }
 
-.footer .copyright {
-    margin: 0; /* Remove a margem padrão */
-}
 
-.footer a {
-    color: #ff6600; /* Cor de destaque para links */
-    text-decoration: none; /* Remove o sublinhado */
-}
 
-.footer a:hover {
-    text-decoration: underline; /* Adiciona sublinhado quando o link é hover */
-}
-
-.footer i {
-    margin-right: 5px; /* Espaço entre o ícone e o texto */
-}
 
