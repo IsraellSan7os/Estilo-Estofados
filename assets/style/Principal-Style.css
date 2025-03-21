@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000000;
+    padding: 10px 20px;
+    color: white;
+    position: fixed; /* Torna o cabeçalho fixo */
+    top: 0; /* Fixa o cabeçalho no topo */
+    left: 0; /* Garante que fique na esquerda */
+    width: 100%; /* Garante que ocupe toda a largura da tela */
+    z-index: 1000; /* Garante que o cabeçalho ficará sobre outros elementos */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para destacá-lo */
+}
+
+/* Espaçamento do conteúdo após o header fixo */
+body {
+    padding-top: 60px; /* Ajuste o valor conforme a altura do seu cabeçalho */
+ 
+}
+
+
+/* Estilizando a logo */
+.logo img {
+    height: 50px;
+    /* Ajuste conforme necessário */
+}
+
+/* Botão do menu hambúrguer */
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+    /* Escondido por padrão */
+}
+
+/* Estilo do menu */
+.nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav ul li {
+    margin: 0 15px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #ff6600;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        /* Mostra o botão */
+    }
+
+    .nav {
+        display: none;
+        /* Esconde o menu inicialmente */
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav ul {
+        flex-direction: column;
+    }
+
+    .nav ul li {
+        margin: 10px 0;
+    }
+
+    .nav.show {
+        display: flex;
+        /* Mostra o menu quando ativo */
+    }
+}
+
+.social-media {
+    display: flex;
+    margin: 10px;
+    gap: 10px;
+    text-align: center;
+    font-size: 20px;
+    background-color: antiquewhite;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+
+.main {
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+    /* Espaçamento superior e centralização */
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: rgba(15, 15, 15, 0.2) 0px 2px 8px 0px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .main {
+        width: 95%;
+        /* Ocupar mais espaço em telas pequenas */
+        padding: 10px;
+    }
+
+    .video-container iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+        /* Mantém a proporção do vídeo */
+    }
+}
+
+/* Melhorando a legibilidade do texto */
+.texto {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+
+.main {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); /* Sombra discreta */
+    text-align: center;
+}
+
+.main h1 {
+    color: #ff6600;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.texto-h4 {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.texto {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.texto-main h3 {
+    color: #ff6600;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.texto-main h4 {
+    color: #ff6600;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.video-container iframe {
+    border-radius: 8px;
+}
+
+.texto-main p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.section {
+    max-width: 100%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.section h4 {
+    color: #ff6600;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.section h3 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.title span {
+    color: #ff6600;
+}
+
+.map {
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.section p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.section a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+.section a:hover {
+    text-decoration: underline;
+}
+
+.formulario {
+    max-width: 600px;  /* Limita a largura do formulário */
+    margin: 40px auto; /* Adiciona margem superior e inferior e centraliza */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #ff6600; /* Cor de fundo branca */
+    border: 1px solid #ddd; /* Borda sutil para destacar o formulário */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.input-grup {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;  /* Espaçamento entre os campos */
+}
+
+.input-grup label {
+    font-size: 16px;
+    color: #333;
+}
+
+.input-grup input,
+.input-grup textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+}
+
+.input-grup input:focus,
+.input-grup textarea:focus {
+    border-color: #ff6600; /* Cor de destaque quando em foco */
+}
+
+.input-grup textarea {
+    resize: vertical;
+    height: 150px; /* Altura fixa para a área de texto */
+}
+
+/* Ajuste para tornar os campos mais compactos */
+.formulario {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer {
+    background-color: #333; /* Cor de fundo escura para o rodapé */
+    color: #fff; /* Texto branco */
+    padding: 20px 0; /* Espaçamento acima e abaixo */
+    text-align: center; /* Centraliza o texto */
+    font-size: 14px; /* Tamanho de fonte mais discreto */
+    margin-top: 0; /* Remove o espaço superior */
+    position: relative; /* Ajusta a posição */
+    bottom: 0; /* Faz o rodapé ficar no final da página */
+    width: 100%; /* Garante que o rodapé ocupe toda a largura da página */
+}
+
+.footer .copyright {
+    margin: 0; /* Remove a margem padrão */
+}
+
+.footer a {
+    color: #ff6600; /* Cor de destaque para links */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Adiciona sublinhado quando o link é hover */
+}
+
+.footer i {
+    margin-right: 5px; /* Espaço entre o ícone e o texto */
+}
+

@@ -8,8 +8,10 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/Principal-Style.css">
     <!---Style-->
+    <script src="assets/js/scritp.js"></script>
+    <!--Script-->
 
 </head>
 
@@ -18,18 +20,20 @@
     <header class="header">
 
         <div class="logo">
-            <img src="assets/logo/logo-blk.png" alt="">
+            <img src="assets/logo/logo-blk.png" alt="Logo">
         </div>
+
+        <!-- Botão do Menu Hambúrguer -->
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+
         <nav class="nav">
             <ul>
                 <li><a href="Principal.html">Sobre</a></li>
-                <li><a href="pages/sofas.html">Sofas</a></li>
+                <li><a href="pages/sofas.html">Sofás</a></li>
                 <li><a href="pages/poltrona.html">Poltronas</a></li>
                 <li><a href="pages/catalogo.html">Catálogo</a></li>
-                <li><a href="pages/contato.html">Contato</a></li>
-                <li><a href="pages/videos.html">Vidios</a></li>
-                <li><a href="pages/entregas.html">Entragas</a></li>
-                <li><a href="pages/garantia.html">Garantia</li>
             </ul>
         </nav>
 
@@ -46,8 +50,7 @@
 
     <main class="main">
         <h1>Sobré Nós</h1>
-        <h4>Conheça quem realmente Somos</h4>
-        <p>E veja que somos como você sempre em busca o nosso melhor!</p>
+        <h4 class="texto-h4">Conheça quem realmente Somos</h4>
 
         <div class="video-container">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/XrvW6W3j_UE?si=N6lBFrMyS1Ko2_IH"
@@ -60,7 +63,7 @@
 
             <h3 class="texto-h3">Design, conforto e qualidade!</h3>
 
-            <h4 class="texto-h4"> 🥰 Bem-vindo à ESTILO ESTOFADOS – O Destino Perfeito para Sofás Exclusivos!</h4>
+            <h4 class="texto-h4">🥰 Bem-vindo à ESTILO ESTOFADOS – O Destino Perfeito para Sofás Exclusivos!</h4>
 
             <p class="texto">Descubra o luxo e o conforto sem igual ao explorar a gama extraordinária de sofás
                 cuidadosamente
@@ -107,7 +110,7 @@
 
             <p>Na ESTILO ESTOFADOS, não vendemos apenas sofás; entregamos experiências de conforto e estilo que são
                 inigualáveis. Seu lar merece o melhor, e nós estamos aqui para tornar isso uma realidade. Encontre o
-                sofá dos seus sonhos conosco. 😍</p>
+                sofá dos seus sonhos conosco.😍</p>
         </div>
     </main>
 
@@ -144,7 +147,7 @@
                         <input type="text" id="nome" name="nome" placeholder="Nome" required>
 
                         <label for="email">E-mail:</label>
-                        <input type="email" id="email" name="email" placeholder="" required>
+                        <input type="email" id="email" name="email" placeholder="Emial" required>
 
                         <label for="celular">Celular</label>
                         <input type="tel" id="celular" name="celular" placeholder="Celular" required>
