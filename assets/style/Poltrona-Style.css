@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000000;
+    padding: 10px 20px;
+    color: white;
+    position: fixed; /* Torna o cabeçalho fixo */
+    top: 0; /* Fixa o cabeçalho no topo */
+    left: 0; /* Garante que fique na esquerda */
+    width: 100%; /* Garante que ocupe toda a largura da tela */
+    z-index: 1000; /* Garante que o cabeçalho ficará sobre outros elementos */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para destacá-lo */
+}
+
+/* Estilo para os títulos */
+h1, h3, h4 {
+    text-align: center;
+    color: #000000;
+    margin: 10px 0;
+}
+
+/* Estilo específico para o h1 */
+h1 {
+    font-size: 3em; /* Tamanho maior para o título principal */
+    font-weight: bold;
+    color: #000000; /* Cor do título principal */
+}
+
+/* Estilo para o h3 */
+h3 {
+    font-size: 1.8em;
+    color: #000000; /* Cor um pouco mais suave */
+    font-style: italic; /* Adicionando itálico */
+}
+
+/* Estilo para o h4 */
+h4 {
+    font-size: 1.5em;
+    font-weight: normal;
+    color: #000000; /* Cor azul para destacar */
+}
+
+/* Ajuste de margens */
+h1, h3, h4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* Espaçamento do conteúdo após o header fixo */
+body {
+    padding-top: 60px; /* Ajuste o valor conforme a altura do seu cabeçalho */
+    font-family: poppins, sans-serif;
+    background: #ff6600;
+ 
+}
+
+
+/* Estilizando a logo */
+.logo img {
+    height: 50px;
+    /* Ajuste conforme necessário */
+}
+
+/* Botão do menu hambúrguer */
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+    /* Escondido por padrão */
+}
+
+/* Estilo do menu */
+.nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav ul li {
+    margin: 0 15px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #ff6600;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        /* Mostra o botão */
+    }
+
+    .nav {
+        display: none;
+        /* Esconde o menu inicialmente */
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav ul {
+        flex-direction: column;
+    }
+
+    .nav ul li {
+        margin: 10px 0;
+    }
+
+    .nav.show {
+        display: flex;
+        /* Mostra o menu quando ativo */
+    }
+}
+
+.social-media {
+    display: flex;
+    margin: 10px;
+    gap: 10px;
+    text-align: center;
+    font-size: 20px;
+    background-color: antiquewhite;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+.poltronas {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.poltronas:hover {
+    transform: translateY(-10px);
+}
+
+.poltronas img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.poltronas h4 {
+    margin-top: 10px;
+}
+
+.poltronas a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.poltronas a:hover {
+    color: #007bff;
+}
+
+/* Estilo do mapa e contato */
+.section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.map {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    margin: 20px auto;
+    border: none;
+}
+
+.formulario {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.formulario form {
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-grup label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.input-grup input, .input-grup textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.input-grup textarea {
+    height: 150px;
+}
+
+/* Estilo do rodapé */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .header .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header .social-media {
+        position: static;
+        margin-top: 10px;
+    }
+
+    .main {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        font-size: 14px;
+    }
+}
